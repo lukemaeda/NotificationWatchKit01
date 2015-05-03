@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XRV-zb-Lin">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="fc5-X9-5ox">
+            <objects>
+                <controller id="XRV-zb-Lin" customClass="InterfaceController">
+                    <items>
+                        <label width="1" alignment="center" text="花火大会夏祭り" textAlignment="center" id="MX2-2Q-Flz"/>
+                        <imageView width="1" height="0.84999999999999998" alignment="center" contentMode="scaleAspectFit" id="pa9-mg-USy"/>
+                    </items>
+                    <connections>
+                        <outlet property="fireImage" destination="pa9-mg-USy" id="0Jg-Uz-Esc"/>
+                        <outlet property="fireLabel" destination="MX2-2Q-Flz" id="pka-R9-8pk"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="348"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="qlA-bj-gwB">
+            <objects>
+                <notificationController id="paC-52-JFH">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XAg-hA-w8z">
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="Label" id="L8n-Hg-SAn"/>
+                        <separator alignment="left" id="B4g-Ys-UGq">
+                            <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </separator>
+                        <imageView width="1" alignment="left" image="fireimg01" id="iGt-cv-EXA"/>
+                        <label alignment="left" text="ペイロードからのアラート。" numberOfLines="2" id="8ZJ-SZ-MtC"/>
+                        <label alignment="center" text="- Static -" textAlignment="center" id="KpX-JZ-R8T"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="X2E-zW-vlj">
+                        <color key="sashColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </notificationCategory>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XAg-hA-w8z" id="ahK-Lp-dCB"/>
+                        <segue destination="WwX-q5-TXq" kind="relationship" relationship="dynamicNotificationInterface" id="5aZ-9G-Dxn"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="642.75"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="8fN-pb-Bsj">
+            <objects>
+                <controller id="WwX-q5-TXq" customClass="NotificationController">
+                    <items>
+                        <label width="1" alignment="center" text="Label" textAlignment="center" id="TY3-e2-XGg">
+                            <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <separator alignment="left" id="P2C-XJ-txo"/>
+                        <label width="1" alignment="left" text="Label" textAlignment="center" id="KQA-lM-AcH">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <separator alignment="left" id="O9P-tI-vss"/>
+                        <group width="1" height="71" alignment="center" backgroundImage="fireimg01" contentMode="scaleAspectFit" layout="vertical" id="TqY-TR-gtp"/>
+                        <separator alignment="left" id="768-p8-Kwq"/>
+                    </items>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="bodyLabel" destination="TY3-e2-XGg" id="asw-k2-HCb"/>
+                        <outlet property="titleLabel" destination="KQA-lM-AcH" id="i8Q-J7-aeE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="451" y="643"/>
+        </scene>
+    </scenes>
+</document>
